@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="FreeEcho.FEControls.NumericUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FreeEcho.FEControls"
+             mc:Ignorable="d" 
+             MinWidth="70" Height="24" MinHeight="24" MaxHeight="24">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="24"/>
+            <ColumnDefinition Width="24"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="NumberTextBox" Height="24" TextWrapping="NoWrap" Grid.Column="0" Background="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=TextBoxBackgroundBrush, FallbackValue=#FFFFFF}" Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=TextBoxForegroundBrush, FallbackValue=#000000}" BorderBrush="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=TextBoxBorderBrush, FallbackValue=#AAAAAA}"/>
+        <RepeatButton x:Name="UpButton" Height="24" Delay="700" Interval="20" Focusable="False" IsTabStop="False" Grid.Column="1">
+            <RepeatButton.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle Margin="0" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonBackgroundBrush, FallbackValue=#FFFFFF}" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonBorderBrush, FallbackValue=#AAAAAA}" StrokeThickness="1"/>
+                        <Polyline Points="12,2 12,22" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonArrowBrush, FallbackValue=#000000}" StrokeThickness="1"/>
+                        <Polyline Points="4,10 12,2 20,10" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonArrowBrush, FallbackValue=#000000}" StrokeThickness="1"/>
+                    </Grid>
+                </ControlTemplate>
+            </RepeatButton.Template>
+        </RepeatButton>
+        <RepeatButton x:Name="DownButton" Height="24" Delay="700" Interval="20" Focusable="False" IsTabStop="False" Grid.Column="2">
+            <RepeatButton.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle Margin="0" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonBackgroundBrush, FallbackValue=#FFFFFF}" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonBorderBrush, FallbackValue=#AAAAAA}" StrokeThickness="1"/>
+                        <Polyline Points="12,2 12,22" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonArrowBrush, FallbackValue=#000000}" StrokeThickness="1"/>
+                        <Polyline Points="4,14 12,22 20,14" Stroke="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=UpDownButtonArrowBrush, FallbackValue=#000000}" StrokeThickness="1"/>
+                    </Grid>
+                </ControlTemplate>
+            </RepeatButton.Template>
+        </RepeatButton>
+    </Grid>
+</UserControl>

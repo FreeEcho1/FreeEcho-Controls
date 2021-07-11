@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Version>1.0.0</Version>
+    <PackageId>FreeEcho Controls</PackageId>
+    <Product>FreeEcho Controls</Product>
+    <Authors>FreeEcho</Authors>
+    <Company>FreeEcho</Company>
+    <Copyright>© 2021 FreeEcho</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Z:\AppDevelopment\Library\.Net\FreeEchoのUI\FEControls\FEControls\FEControls.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Z:\AppDevelopment\Library\.Net\FreeEchoのUI\FEControls\FEControls\FEControls.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

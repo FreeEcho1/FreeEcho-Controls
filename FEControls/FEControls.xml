@@ -1,0 +1,1114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FEControls</name>
+    </assembly>
+    <members>
+        <member name="T:FreeEcho.FEControls.CheckListBox">
+            <summary>
+            Check ListBox
+            </summary>
+        </member>
+        <member name="E:FreeEcho.FEControls.CheckListBox.CheckStateChanged">
+            <summary>
+            チェック状態変更のイベント
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBox.DoCheckStateChanged(FreeEcho.FEControls.CheckListBoxItem)">
+            <summary>
+            チェック状態が変更されたイベントを実行
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBox.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            「Selector」の項目が変更されたときに選択されている項目を更新
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBox.CheckListBox_CheckStateChanged(System.Object,FreeEcho.FEControls.CheckListBoxItemEventArgs)">
+            <summary>
+            項目のチェック状態が変更された時のイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:FreeEcho.FEControls.CheckListBoxItem">
+            <summary>
+            Check ListBox Item
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.BackgroundGrid">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.BackgroundBrushProperty">
+            <summary>
+            「背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.BackgroundBrush">
+            <summary>
+            背景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.OnBackgroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「背景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.RectangleMouseOverAndFocus">
+            <summary>
+            マウスオーバーとフォーカスのRectangle
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.MouseOverAndFocusBrushProperty">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.MouseOverAndFocusBrush">
+            <summary>
+            マウスオーバーとフォーカスのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.OnMouseOverAndFocusBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            マウスオーバーとフォーカスのブラシが変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.MouseOverAndFocusOpacityProperty">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.MouseOverAndFocusOpacity">
+            <summary>
+            マウスオーバーとフォーカスの透明度
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.OnMouseOverAndFocusOpacityChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.CheckBox">
+            <summary>
+            CheckBox
+            </summary>
+        </member>
+        <member name="E:FreeEcho.FEControls.CheckListBoxItem.CheckStateChanged">
+            <summary>
+            チェック状態変更イベント
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.DoCheckStateChanged">
+            <summary>
+            チェック状態が変更されたイベントを実行
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.LabelText">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.CheckListBoxItem.TextBrushProperty">
+            <summary>
+            「テキストのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.TextBrush">
+            <summary>
+            テキストのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.OnTextBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「テキストのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.Text">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItem.IsChecked">
+            <summary>
+            チェック状態
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.CheckListBoxItem_IsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「IsEnabled」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItem.CheckBox_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            チェックボックスがクリックされた
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:FreeEcho.FEControls.CheckListBoxItemEventArgs">
+            <summary>
+            CheckListBoxItemのイベントデータ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.CheckListBoxItemEventArgs.Item">
+            <summary>
+            項目
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItemEventArgs.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.CheckListBoxItemEventArgs.#ctor(FreeEcho.FEControls.CheckListBoxItem)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="itemData">CheckListBoxItem</param>
+        </member>
+        <member name="T:FreeEcho.FEControls.ImageButton">
+            <summary>
+            イメージボタン
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.GridBackground">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.BackgroundBrushProperty">
+            <summary>
+            「背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.BackgroundBrush">
+            <summary>
+            背景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.OnBackgroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「背景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.RectangleMouseOverAndFocus">
+            <summary>
+            マウスオーバーとフォーカスのRectangle
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.MouseOverAndFocusBrushProperty">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.MouseOverAndFocusBrush">
+            <summary>
+            マウスオーバーとフォーカスのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.OnMouseOverAndFocusBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.MouseOverAndFocusOpacityProperty">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.MouseOverAndFocusOpacity">
+            <summary>
+            マウスオーバーとフォーカスの透明度
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.OnMouseOverAndFocusOpacityChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.Image">
+            <summary>
+            画像
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.ImageSourceProperty">
+            <summary>
+            「画像」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.ImageSource">
+            <summary>
+            画像
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.OnImageSourceChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「画像」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.LabelText">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.Text">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageButton.TextBrushProperty">
+            <summary>
+            「テキストのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageButton.TextBrush">
+            <summary>
+            テキストのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.OnTextBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「テキストのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageButton.ImageButton_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            サイズが変更された
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:FreeEcho.FEControls.ImageTabItem">
+            <summary>
+            Image TabItem
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.GridBackground">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.BackgroundBrushProperty">
+            <summary>
+            「背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.BackgroundBrush">
+            <summary>
+            背景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.OnBackgroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「背景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.RectangleMouseOverAndFocus">
+            <summary>
+            マウスオーバーとフォーカスのRectangle
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.MouseOverAndFocusBrushProperty">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.MouseOverAndFocusBrush">
+            <summary>
+            マウスオーバーとフォーカスのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.OnMouseOverAndFocusBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.MouseOverAndFocusOpacityProperty">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.MouseOverAndFocusOpacity">
+            <summary>
+            マウスオーバーとフォーカスの透明度
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.OnMouseOverAndFocusOpacityChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.Image">
+            <summary>
+            画像
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.ImageSourceProperty">
+            <summary>
+            「画像」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.ImageSource">
+            <summary>
+            画像
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.OnImageSourceChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「画像」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.LabelText">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.Text">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ImageTabItem.TextBrushProperty">
+            <summary>
+            「テキストのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ImageTabItem.TextBrush">
+            <summary>
+            テキストのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.OnTextBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「テキストのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ImageTabItem.ImageTabItem_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            サイズが変更された
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:FreeEcho.FEControls.ListBoxItemValidState">
+            <summary>
+            有効状態付きのListBoxItem
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.GridBackground">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.BackgroundBrushProperty">
+            <summary>
+            「背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.BackgroundBrush">
+            <summary>
+            背景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ListBoxItemValidState.OnBackgroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「背景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.RectangleMouseOverAndFocus">
+            <summary>
+            マウスオーバーとフォーカスのRectangle
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.MouseOverAndFocusBrushProperty">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.MouseOverAndFocusBrush">
+            <summary>
+            マウスオーバーとフォーカスのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ListBoxItemValidState.OnMouseOverAndFocusBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.MouseOverAndFocusOpacityProperty">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.MouseOverAndFocusOpacity">
+            <summary>
+            マウスオーバーとフォーカスの透明度
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ListBoxItemValidState.OnMouseOverAndFocusOpacityChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.IsValidStateProperty">
+            <summary>
+            「有効状態」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.IsValidState">
+            <summary>
+            有効状態
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.LabelText">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.Text">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ListBoxItemValidState.TextBrushProperty">
+            <summary>
+            「テキストのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ListBoxItemValidState.TextBrush">
+            <summary>
+            テキストのブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ListBoxItemValidState.OnTextBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「テキストのブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ListBoxItemValidState.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.MessageBox">
+            <summary>
+            MessageBox
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBox.Show">
+            <summary>
+            表示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBox.Show(System.String,System.String,FreeEcho.FEControls.MessageBoxButton,System.Windows.Window)">
+            <summary>
+            表示
+            </summary>
+            <param name="title">タイトル</param>
+            <param name="message">メッセージ</param>
+            <param name="button">表示するボタン</param>
+            <param name="parentWindow">親ウィンドウ</param>
+            <returns>押されたボタン</returns>
+        </member>
+        <member name="T:FreeEcho.FEControls.MessageBoxButton">
+            <summary>
+            MessageBoxに表示するボタン
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxButton.None">
+            <summary>
+            ボタンなし
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxButton.Ok">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxButton.YesNo">
+            <summary>
+            Yes、No
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxButton.YesCancel">
+            <summary>
+            Yes、Cancel
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxButton.YesNoCancel">
+            <summary>
+            Yes、No、Cancel
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.MessageBoxResult">
+            <summary>
+            MessageBoxで押されたボタン
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxResult.Ok">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxResult.Yes">
+            <summary>
+            Yes
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxResult.No">
+            <summary>
+            No
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.MessageBoxResult.Cancel">
+            <summary>
+            Cancel
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.MessageBoxWindow">
+            <summary>
+            MessageBoxのウィンドウ
+            </summary>
+            <summary>
+            MessageBoxWindow
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.Ok">
+            <summary>
+            「OK」ボタンの文字列
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.Yes">
+            <summary>
+            「Yes」ボタンの文字列
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.No">
+            <summary>
+            「No」ボタンの文字列
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.Cancel">
+            <summary>
+            「Cancel」ボタンの文字列
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.UseStyle">
+            <summary>
+            使用するスタイル
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.UseStyleUri">
+            <summary>
+            使用するスタイルのURI
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.MessageBoxWindow.Result">
+            <summary>
+            押されたボタン
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.#ctor(System.String,System.String,FreeEcho.FEControls.MessageBoxButton,System.Windows.Window)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="title">タイトル</param>
+            <param name="message">メッセージ</param>
+            <param name="button">表示するボタン</param>
+            <param name="parentWindow">親ウィンドウ</param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.Initialize(System.String,System.String,FreeEcho.FEControls.MessageBoxButton,System.Windows.Window)">
+            <summary>
+            初期化
+            </summary>
+            <param name="title">タイトル</param>
+            <param name="message">メッセージ</param>
+            <param name="button">表示するボタン</param>
+            <param name="parentWindow">親ウィンドウ</param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.MessageBoxWindow_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            ウィンドウの「Loaded」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.OkButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「OK」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.YesButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「Yes」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.NoButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「No」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.CancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「Cancel」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.MessageBoxWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.NumericUpDown">
+            <summary>
+            NumericUpDown
+            </summary>
+            <summary>
+            NumericUpDown
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.PrivateMinimumValue">
+            <summary>
+            最小値
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.MinimumValue">
+            <summary>
+            最小値
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.PrivateMaximumValue">
+            <summary>
+            最大値
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.MaximumValue">
+            <summary>
+            最大値
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.PrivateValue">
+            <summary>
+            値
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.Value">
+            <summary>
+            値
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.ValueInt">
+            <summary>
+            値 (int)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.PrivateIsUseDecimal">
+            <summary>
+            少数を使用する
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.IsUseDecimal">
+            <summary>
+            少数を使用する
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.PrivateNumberOfDecimalPlaces">
+            <summary>
+            小数点以下の桁数
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.NumberOfDecimalPlaces">
+            <summary>
+            小数点以下の桁数
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.IntegerIncrementDecrement">
+            <summary>
+            整数の増減値
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.DecimalIncrementDecrement">
+            <summary>
+            少数の増減値
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.Regex">
+            <summary>
+            正規表現
+            </summary>
+        </member>
+        <member name="E:FreeEcho.FEControls.NumericUpDown.ChangeValue">
+            <summary>
+            値が変更されたイベント
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.DoChangeValue">
+            <summary>
+            値が変更されたイベントを実行
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.TextBoxBackgroundBrushProperty">
+            <summary>
+            「TextBoxの背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.TextBoxBackgroundBrush">
+            <summary>
+            TextBoxの背景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.OnTextBoxBackgroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「TextBoxの背景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.TextBoxForegroundBrushProperty">
+            <summary>
+            「TextBoxの前景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.TextBoxForegroundBrush">
+            <summary>
+            TextBoxの前景のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.OnTextBoxForegroundBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「TextBoxの前景のブラシ」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.TextBoxBorderBrushProperty">
+            <summary>
+            「TextBoxの枠線のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.TextBoxBorderBrush">
+            <summary>
+            TextBoxの枠線のブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.UpDownButtonBackgroundBrushProperty">
+            <summary>
+            「アップダウンボタンの背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.UpDownButtonBackgroundBrush">
+            <summary>
+            アップダウンボタンの背景のブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.UpDownButtonBorderBrushProperty">
+            <summary>
+            「アップダウンボタンの枠線のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.UpDownButtonBorderBrush">
+            <summary>
+            アップダウンボタンの枠線のブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.NumericUpDown.UpDownButtonArrowBrushProperty">
+            <summary>
+            「アップダウンボタンの矢印のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.NumericUpDown.UpDownButtonArrowBrush">
+            <summary>
+            アップダウンボタンの矢印のブラシ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.NumberTextBox_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            「数値」TextBoxの「PreviewTextInput」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.NumberTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            「数値」TextBoxの「PreviewKeyDown」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.NumberTextBox_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            「数値」TextBoxの「TextChanged」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.UpButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「アップ」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.DownButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「ダウン」Buttonの「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.CheckIfTheCursorIsInASmallNumberOfPosition">
+            <summary>
+            少数の位置にカーソルがあるか確認
+            </summary>
+            <returns>カーソルが少数の位置にあるかの値 (いいえ「false」/はい「true」)</returns>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.GetTheNumberOfDigitsInAnInteger">
+            <summary>
+            整数の桁数を取得
+            </summary>
+            <returns>整数の桁数</returns>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.ValuePlus">
+            <summary>
+            値を足す
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.ValueMinus">
+            <summary>
+            値を引く
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.NumericUpDown.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.NumericUpDownChangeValueArgs">
+            <summary>
+            「NumericUpDown」の「ChangeValue」イベントデータ
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.ToggleSwitch">
+            <summary>
+            ToggleSwitch
+            </summary>
+            <summary>
+            ToggleSwitch
+            </summary>
+        </member>
+        <member name="E:FreeEcho.FEControls.ToggleSwitch.IsOnChange">
+            <summary>
+            「IsOn」変更イベント
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.DoIsOnChange">
+            <summary>
+            「IsOnChange」イベントを実行
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.IsOnProperty">
+            <summary>
+            「有効状態」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.IsOn">
+            <summary>
+            On/Off
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.IsOnChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            「On/Off」が変更されたイベント
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.IsOnDoNotEvent">
+            <summary>
+            On/Off (イベントを発生させない)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.BackgroundBrushProperty">
+            <summary>
+            「トグルスイッチの背景のブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.BackgroundBrush">
+            <summary>
+            トグルスイッチの背景のブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.ToggleSwitchBrushProperty">
+            <summary>
+            「トグルスイッチのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.ToggleSwitchBrush">
+            <summary>
+            トグルスイッチのブラシ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.Text">
+            <summary>
+            テキスト
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.TextBrushProperty">
+            <summary>
+            「テキストのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.TextBrush">
+            <summary>
+            テキストのブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.MouseOverAndFocusBrushProperty">
+            <summary>
+            「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.MouseOverAndFocusBrush">
+            <summary>
+            マウスオーバーとフォーカスのブラシ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.MouseOverAndFocusOpacityProperty">
+            <summary>
+            「マウスオーバーとフォーカスの透明度」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.MouseOverAndFocusOpacity">
+            <summary>
+            マウスオーバーとフォーカスの透明度
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEControls.ToggleSwitch.IsTheMouseCursorInTheSwitchProperty">
+            <summary>
+            「トグルスイッチにマウスカーソルが触れているかの値」の依存プロパティ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEControls.ToggleSwitch.IsTheMouseCursorInTheSwitch">
+            <summary>
+            トグルスイッチにマウスカーソルが触れているかの値
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.ButtonSwitch_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            「Click」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.ButtonSwitch_MouseEnter(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            「MouseEnter」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.ButtonSwitch_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            「MouseLeave」イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            キーが離された
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:FreeEcho.FEControls.ToggleSwitch.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.ToggleSwitchEventArgs">
+            <summary>
+            ToggleSwitchのイベントデータ
+            </summary>
+        </member>
+    </members>
+</doc>
