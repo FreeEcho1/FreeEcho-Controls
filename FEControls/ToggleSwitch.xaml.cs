@@ -8,9 +8,18 @@
         public partial class ToggleSwitch : System.Windows.Controls.UserControl
         {
             /// <summary>
+            /// 「IsOn」変更イベントハンドラ
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            public delegate void IsOnChangeEventHandler(
+                object sender,
+                ToggleSwitchEventArgs e
+                );
+            /// <summary>
             /// 「IsOn」変更イベント
             /// </summary>
-            public event System.EventHandler<ToggleSwitchEventArgs> IsOnChange;
+            public event IsOnChangeEventHandler IsOnChange;
             /// <summary>
             /// 「IsOnChange」イベントを実行
             /// </summary>

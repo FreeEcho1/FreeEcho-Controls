@@ -8,9 +8,18 @@
         public partial class CheckListBox : System.Windows.Controls.ListBox
         {
             /// <summary>
+            /// チェック状態変更のイベントハンドラ
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            public delegate void EventHandlerCheckStateChanged(
+                object sender,
+                CheckListBoxItemEventArgs e
+                );
+            /// <summary>
             /// チェック状態変更のイベント
             /// </summary>
-            public event System.EventHandler<CheckListBoxItemEventArgs> CheckStateChanged;
+            public event EventHandlerCheckStateChanged CheckStateChanged;
             /// <summary>
             /// チェック状態が変更されたイベントを実行
             /// </summary>

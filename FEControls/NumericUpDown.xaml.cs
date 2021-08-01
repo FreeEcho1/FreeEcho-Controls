@@ -2,6 +2,7 @@
 {
     namespace FEControls
     {
+
         /// <summary>
         /// NumericUpDown
         /// </summary>
@@ -184,9 +185,18 @@
             /// </summary>
             private System.Text.RegularExpressions.Regex Regex = new("^[0-9-]*$");
             /// <summary>
+            /// 値が変更されたイベントハンドラ
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            public delegate void ChangeValueHandler(
+                object sender,
+                NumericUpDownChangeValueArgs e
+                );
+            /// <summary>
             /// 値が変更されたイベント
             /// </summary>
-            public event System.EventHandler<NumericUpDownChangeValueArgs> ChangeValue;
+            public event ChangeValueHandler ChangeValue;
             /// <summary>
             /// 値が変更されたイベントを実行
             /// </summary>

@@ -9,6 +9,13 @@
             Check ListBox
             </summary>
         </member>
+        <member name="T:FreeEcho.FEControls.CheckListBox.EventHandlerCheckStateChanged">
+            <summary>
+            チェック状態変更のイベントハンドラ
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="E:FreeEcho.FEControls.CheckListBox.CheckStateChanged">
             <summary>
             チェック状態変更のイベント
@@ -102,6 +109,13 @@
             <summary>
             CheckBox
             </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.CheckListBoxItem.EventHandlerCheckStateChanged">
+            <summary>
+            チェック状態変更のイベントハンドラ
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="E:FreeEcho.FEControls.CheckListBoxItem.CheckStateChanged">
             <summary>
@@ -807,6 +821,13 @@
             正規表現
             </summary>
         </member>
+        <member name="T:FreeEcho.FEControls.NumericUpDown.ChangeValueHandler">
+            <summary>
+            値が変更されたイベントハンドラ
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="E:FreeEcho.FEControls.NumericUpDown.ChangeValue">
             <summary>
             値が変更されたイベント
@@ -970,6 +991,13 @@
             <summary>
             ToggleSwitch
             </summary>
+        </member>
+        <member name="T:FreeEcho.FEControls.ToggleSwitch.IsOnChangeEventHandler">
+            <summary>
+            「IsOn」変更イベントハンドラ
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="E:FreeEcho.FEControls.ToggleSwitch.IsOnChange">
             <summary>
