@@ -25,6 +25,7 @@
             <summary>
             チェック状態が変更されたイベントを実行
             </summary>
+            <param name="item">CheckListBoxItem</param>
         </member>
         <member name="M:FreeEcho.FEControls.CheckListBox.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
             <summary>

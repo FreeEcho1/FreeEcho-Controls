@@ -1,321 +1,317 @@
-﻿namespace FreeEcho
+﻿namespace FreeEcho.FEControls;
+
+/// <summary>
+/// Image TabItem
+/// </summary>
+public partial class ImageTabItem : System.Windows.Controls.TabItem
 {
-    namespace FEControls
+    /// <summary>
+    /// 背景
+    /// </summary>
+    private readonly System.Windows.Controls.Grid GridBackground = new();
+    /// <summary>
+    /// 「背景のブラシ」の依存プロパティ
+    /// </summary>
+    public static readonly System.Windows.DependencyProperty BackgroundBrushProperty = System.Windows.DependencyProperty.Register("BackgroundBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF)), OnBackgroundBrushChanged));
+    /// <summary>
+    /// 背景のブラシ
+    /// </summary>
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("背景のブラシ")]
+    public System.Windows.Media.Brush BackgroundBrush
     {
-        /// <summary>
-        /// Image TabItem
-        /// </summary>
-        public partial class ImageTabItem : System.Windows.Controls.TabItem
+        set
         {
-            /// <summary>
-            /// 背景
-            /// </summary>
-            private readonly System.Windows.Controls.Grid GridBackground = new();
-            /// <summary>
-            /// 「背景のブラシ」の依存プロパティ
-            /// </summary>
-            public static readonly System.Windows.DependencyProperty BackgroundBrushProperty = System.Windows.DependencyProperty.Register("BackgroundBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF)), OnBackgroundBrushChanged));
-            /// <summary>
-            /// 背景のブラシ
-            /// </summary>
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("背景のブラシ")]
-            public System.Windows.Media.Brush BackgroundBrush
+            SetValue(BackgroundBrushProperty, value);
+        }
+        get
+        {
+            return ((System.Windows.Media.Brush)GetValue(BackgroundBrushProperty));
+        }
+    }
+    /// <summary>
+    /// 「背景のブラシ」が変更されたイベント
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="e"></param>
+    private static void OnBackgroundBrushChanged(
+        System.Windows.DependencyObject obj,
+        System.Windows.DependencyPropertyChangedEventArgs e
+        )
+    {
+        try
+        {
+            if (obj is ImageTabItem item)
             {
-                set
-                {
-                    SetValue(BackgroundBrushProperty, value);
-                }
-                get
-                {
-                    return ((System.Windows.Media.Brush)GetValue(BackgroundBrushProperty));
-                }
+                item.GridBackground.Background = item.BackgroundBrush;
             }
-            /// <summary>
-            /// 「背景のブラシ」が変更されたイベント
-            /// </summary>
-            /// <param name="obj"></param>
-            /// <param name="e"></param>
-            private static void OnBackgroundBrushChanged(
-                System.Windows.DependencyObject obj,
-                System.Windows.DependencyPropertyChangedEventArgs e
-                )
+        }
+        catch
+        {
+        }
+    }
+    /// <summary>
+    /// マウスオーバーとフォーカスのRectangle
+    /// </summary>
+    private readonly System.Windows.Shapes.Rectangle RectangleMouseOverAndFocus = new()
+    {
+        Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xCC, 0xCC, 0xCC)),
+        Opacity = 0.0
+    };
+    /// <summary>
+    /// 「マウスオーバーとフォーカスのブラシ」の依存プロパティ
+    /// </summary>
+    public static readonly System.Windows.DependencyProperty MouseOverAndFocusBrushProperty = System.Windows.DependencyProperty.Register("MouseOverAndFocusBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xCC, 0xCC, 0xCC)), OnMouseOverAndFocusBrushChanged));
+    /// <summary>
+    /// マウスオーバーとフォーカスのブラシ
+    /// </summary>
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("マウスオーバーとフォーカスのブラシ")]
+    public System.Windows.Media.Brush MouseOverAndFocusBrush
+    {
+        set
+        {
+            SetValue(MouseOverAndFocusBrushProperty, value);
+        }
+        get
+        {
+            return ((System.Windows.Media.Brush)GetValue(MouseOverAndFocusBrushProperty));
+        }
+    }
+    /// <summary>
+    /// 「マウスオーバーとフォーカスのブラシ」が変更されたイベント
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="e"></param>
+    private static void OnMouseOverAndFocusBrushChanged(
+        System.Windows.DependencyObject obj,
+        System.Windows.DependencyPropertyChangedEventArgs e
+        )
+    {
+        try
+        {
+            if (obj is ImageTabItem item)
             {
-                try
-                {
-                    if (obj is ImageTabItem item)
-                    {
-                        item.GridBackground.Background = item.BackgroundBrush;
-                    }
-                }
-                catch
-                {
-                }
+                item.RectangleMouseOverAndFocus.Fill = item.MouseOverAndFocusBrush;
             }
-            /// <summary>
-            /// マウスオーバーとフォーカスのRectangle
-            /// </summary>
-            private readonly System.Windows.Shapes.Rectangle RectangleMouseOverAndFocus = new()
+        }
+        catch
+        {
+        }
+    }
+    /// <summary>
+    /// 「マウスオーバーとフォーカスの透明度」の依存プロパティ
+    /// </summary>
+    public static readonly System.Windows.DependencyProperty MouseOverAndFocusOpacityProperty = System.Windows.DependencyProperty.Register("MouseOverAndFocusOpacity", typeof(double), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(0.0, OnMouseOverAndFocusOpacityChanged));
+    /// <summary>
+    /// マウスオーバーとフォーカスの透明度
+    /// </summary>
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("マウスオーバーとフォーカスの透明度")]
+    public double MouseOverAndFocusOpacity
+    {
+        set
+        {
+            SetValue(MouseOverAndFocusOpacityProperty, value);
+        }
+        get
+        {
+            return ((double)GetValue(MouseOverAndFocusOpacityProperty));
+        }
+    }
+    /// <summary>
+    /// 「マウスオーバーとフォーカスの透明度」が変更されたイベント
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="e"></param>
+    private static void OnMouseOverAndFocusOpacityChanged(
+        System.Windows.DependencyObject obj,
+        System.Windows.DependencyPropertyChangedEventArgs e
+        )
+    {
+        try
+        {
+            if (obj is ImageTabItem item)
             {
-                Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xCC, 0xCC, 0xCC)),
-                Opacity = 0.0
+                item.RectangleMouseOverAndFocus.Opacity = item.MouseOverAndFocusOpacity;
+            }
+        }
+        catch
+        {
+        }
+    }
+    /// <summary>
+    /// 画像
+    /// </summary>
+    private readonly System.Windows.Controls.Image Image = new()
+    {
+        Margin = new(5)
+    };
+    /// <summary>
+    /// 「画像」の依存プロパティ
+    /// </summary>
+    public static readonly System.Windows.DependencyProperty ImageSourceProperty = System.Windows.DependencyProperty.Register("ImageSource", typeof(System.Windows.Media.ImageSource), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(null, OnImageSourceChanged));
+    /// <summary>
+    /// 画像
+    /// </summary>
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("画像")]
+    public System.Windows.Media.ImageSource ImageSource
+    {
+        set
+        {
+            SetValue(ImageSourceProperty, value);
+        }
+        get
+        {
+            return ((System.Windows.Media.ImageSource)GetValue(ImageSourceProperty));
+        }
+    }
+    /// <summary>
+    /// 「画像」が変更されたイベント
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="e"></param>
+    private static void OnImageSourceChanged(
+        System.Windows.DependencyObject obj,
+        System.Windows.DependencyPropertyChangedEventArgs e
+        )
+    {
+        try
+        {
+            if (obj is ImageTabItem item)
+            {
+                item.Image.Source = item.ImageSource;
+            }
+        }
+        catch
+        {
+        }
+    }
+    /// <summary>
+    /// テキスト
+    /// </summary>
+    private readonly System.Windows.Controls.Label LabelText = new()
+    {
+        VerticalAlignment = System.Windows.VerticalAlignment.Center,
+        Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF))
+    };
+    /// <summary>
+    /// テキスト
+    /// </summary>
+    [System.ComponentModel.DefaultValue(null)]
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("テキスト")]
+    public string Text
+    {
+        set
+        {
+            LabelText.Content = value;
+        }
+        get
+        {
+            return ((string)LabelText.Content);
+        }
+    }
+    /// <summary>
+    /// 「テキストのブラシ」の依存プロパティ
+    /// </summary>
+    public static readonly System.Windows.DependencyProperty TextBrushProperty = System.Windows.DependencyProperty.Register("TextBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF)), OnTextBrushChanged));
+    /// <summary>
+    /// テキストのブラシ
+    /// </summary>
+    [System.ComponentModel.Category("ImageTabItem Value")]
+    [System.ComponentModel.Description("テキストのブラシ")]
+    public System.Windows.Media.Brush TextBrush
+    {
+        set
+        {
+            SetValue(TextBrushProperty, value);
+        }
+        get
+        {
+            return ((System.Windows.Media.Brush)GetValue(TextBrushProperty));
+        }
+    }
+    /// <summary>
+    /// 「テキストのブラシ」が変更されたイベント
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="e"></param>
+    private static void OnTextBrushChanged(
+        System.Windows.DependencyObject obj,
+        System.Windows.DependencyPropertyChangedEventArgs e
+        )
+    {
+        try
+        {
+            if (obj is ImageTabItem item)
+            {
+                item.LabelText.Foreground = item.TextBrush;
+            }
+        }
+        catch
+        {
+        }
+    }
+
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    public ImageTabItem()
+    {
+        try
+        {
+            Height = 34;
+            Margin = new(0);
+            Padding = new(0);
+            BorderThickness = new(0);
+            FocusVisualStyle = null;
+
+            System.Windows.Controls.ColumnDefinition columnDefinition;
+            columnDefinition = new()
+            {
+                Width = new(0, System.Windows.GridUnitType.Auto)
             };
-            /// <summary>
-            /// 「マウスオーバーとフォーカスのブラシ」の依存プロパティ
-            /// </summary>
-            public static readonly System.Windows.DependencyProperty MouseOverAndFocusBrushProperty = System.Windows.DependencyProperty.Register("MouseOverAndFocusBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xCC, 0xCC, 0xCC)), OnMouseOverAndFocusBrushChanged));
-            /// <summary>
-            /// マウスオーバーとフォーカスのブラシ
-            /// </summary>
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("マウスオーバーとフォーカスのブラシ")]
-            public System.Windows.Media.Brush MouseOverAndFocusBrush
+            GridBackground.ColumnDefinitions.Add(columnDefinition);
+            columnDefinition = new()
             {
-                set
-                {
-                    SetValue(MouseOverAndFocusBrushProperty, value);
-                }
-                get
-                {
-                    return ((System.Windows.Media.Brush)GetValue(MouseOverAndFocusBrushProperty));
-                }
-            }
-            /// <summary>
-            /// 「マウスオーバーとフォーカスのブラシ」が変更されたイベント
-            /// </summary>
-            /// <param name="obj"></param>
-            /// <param name="e"></param>
-            private static void OnMouseOverAndFocusBrushChanged(
-                System.Windows.DependencyObject obj,
-                System.Windows.DependencyPropertyChangedEventArgs e
-                )
-            {
-                try
-                {
-                    if (obj is ImageTabItem item)
-                    {
-                        item.RectangleMouseOverAndFocus.Fill = item.MouseOverAndFocusBrush;
-                    }
-                }
-                catch
-                {
-                }
-            }
-            /// <summary>
-            /// 「マウスオーバーとフォーカスの透明度」の依存プロパティ
-            /// </summary>
-            public static readonly System.Windows.DependencyProperty MouseOverAndFocusOpacityProperty = System.Windows.DependencyProperty.Register("MouseOverAndFocusOpacity", typeof(double), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(0.0, OnMouseOverAndFocusOpacityChanged));
-            /// <summary>
-            /// マウスオーバーとフォーカスの透明度
-            /// </summary>
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("マウスオーバーとフォーカスの透明度")]
-            public double MouseOverAndFocusOpacity
-            {
-                set
-                {
-                    SetValue(MouseOverAndFocusOpacityProperty, value);
-                }
-                get
-                {
-                    return ((double)GetValue(MouseOverAndFocusOpacityProperty));
-                }
-            }
-            /// <summary>
-            /// 「マウスオーバーとフォーカスの透明度」が変更されたイベント
-            /// </summary>
-            /// <param name="obj"></param>
-            /// <param name="e"></param>
-            private static void OnMouseOverAndFocusOpacityChanged(
-                System.Windows.DependencyObject obj,
-                System.Windows.DependencyPropertyChangedEventArgs e
-                )
-            {
-                try
-                {
-                    if (obj is ImageTabItem item)
-                    {
-                        item.RectangleMouseOverAndFocus.Opacity = item.MouseOverAndFocusOpacity;
-                    }
-                }
-                catch
-                {
-                }
-            }
-            /// <summary>
-            /// 画像
-            /// </summary>
-            private readonly System.Windows.Controls.Image Image = new()
-            {
-                Margin = new(5)
+                Width = new(1, System.Windows.GridUnitType.Star)
             };
-            /// <summary>
-            /// 「画像」の依存プロパティ
-            /// </summary>
-            public static readonly System.Windows.DependencyProperty ImageSourceProperty = System.Windows.DependencyProperty.Register("ImageSource", typeof(System.Windows.Media.ImageSource), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(null, OnImageSourceChanged));
-            /// <summary>
-            /// 画像
-            /// </summary>
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("画像")]
-            public System.Windows.Media.ImageSource ImageSource
-            {
-                set
-                {
-                    SetValue(ImageSourceProperty, value);
-                }
-                get
-                {
-                    return ((System.Windows.Media.ImageSource)GetValue(ImageSourceProperty));
-                }
-            }
-            /// <summary>
-            /// 「画像」が変更されたイベント
-            /// </summary>
-            /// <param name="obj"></param>
-            /// <param name="e"></param>
-            private static void OnImageSourceChanged(
-                System.Windows.DependencyObject obj,
-                System.Windows.DependencyPropertyChangedEventArgs e
-                )
-            {
-                try
-                {
-                    if (obj is ImageTabItem item)
-                    {
-                        item.Image.Source = item.ImageSource;
-                    }
-                }
-                catch
-                {
-                }
-            }
-            /// <summary>
-            /// テキスト
-            /// </summary>
-            private readonly System.Windows.Controls.Label LabelText = new()
-            {
-                VerticalAlignment = System.Windows.VerticalAlignment.Center,
-                Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF))
-            };
-            /// <summary>
-            /// テキスト
-            /// </summary>
-            [System.ComponentModel.DefaultValue(null)]
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("テキスト")]
-            public string Text
-            {
-                set
-                {
-                    LabelText.Content = value;
-                }
-                get
-                {
-                    return ((string)LabelText.Content);
-                }
-            }
-            /// <summary>
-            /// 「テキストのブラシ」の依存プロパティ
-            /// </summary>
-            public static readonly System.Windows.DependencyProperty TextBrushProperty = System.Windows.DependencyProperty.Register("TextBrush", typeof(System.Windows.Media.Brush), typeof(ImageTabItem), new System.Windows.FrameworkPropertyMetadata(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xFF, 0xFF, 0xFF)), OnTextBrushChanged));
-            /// <summary>
-            /// テキストのブラシ
-            /// </summary>
-            [System.ComponentModel.Category("ImageTabItem Value")]
-            [System.ComponentModel.Description("テキストのブラシ")]
-            public System.Windows.Media.Brush TextBrush
-            {
-                set
-                {
-                    SetValue(TextBrushProperty, value);
-                }
-                get
-                {
-                    return ((System.Windows.Media.Brush)GetValue(TextBrushProperty));
-                }
-            }
-            /// <summary>
-            /// 「テキストのブラシ」が変更されたイベント
-            /// </summary>
-            /// <param name="obj"></param>
-            /// <param name="e"></param>
-            private static void OnTextBrushChanged(
-                System.Windows.DependencyObject obj,
-                System.Windows.DependencyPropertyChangedEventArgs e
-                )
-            {
-                try
-                {
-                    if (obj is ImageTabItem item)
-                    {
-                        item.LabelText.Foreground = item.TextBrush;
-                    }
-                }
-                catch
-                {
-                }
-            }
+            GridBackground.ColumnDefinitions.Add(columnDefinition);
+            System.Windows.Controls.Grid.SetColumnSpan(RectangleMouseOverAndFocus, 2);
+            System.Windows.Controls.Grid.SetColumn(Image, 0);
+            System.Windows.Controls.Grid.SetColumn(LabelText, 1);
 
-            /// <summary>
-            /// コンストラクタ
-            /// </summary>
-            public ImageTabItem()
-            {
-                try
-                {
-                    Height = 34;
-                    Margin = new(0);
-                    Padding = new(0);
-                    BorderThickness = new(0);
-                    FocusVisualStyle = null;
+            GridBackground.Children.Add(RectangleMouseOverAndFocus);
+            GridBackground.Children.Add(Image);
+            GridBackground.Children.Add(LabelText);
+            Header = GridBackground;
 
-                    System.Windows.Controls.ColumnDefinition columnDefinition;
-                    columnDefinition = new()
-                    {
-                        Width = new(0, System.Windows.GridUnitType.Auto)
-                    };
-                    GridBackground.ColumnDefinitions.Add(columnDefinition);
-                    columnDefinition = new()
-                    {
-                        Width = new(1, System.Windows.GridUnitType.Star)
-                    };
-                    GridBackground.ColumnDefinitions.Add(columnDefinition);
-                    System.Windows.Controls.Grid.SetColumnSpan(RectangleMouseOverAndFocus, 2);
-                    System.Windows.Controls.Grid.SetColumn(Image, 0);
-                    System.Windows.Controls.Grid.SetColumn(LabelText, 1);
+            SizeChanged += ImageTabItem_SizeChanged;
+        }
+        catch
+        {
+        }
+    }
 
-                    GridBackground.Children.Add(RectangleMouseOverAndFocus);
-                    GridBackground.Children.Add(Image);
-                    GridBackground.Children.Add(LabelText);
-                    Header = GridBackground;
-
-                    SizeChanged += ImageTabItem_SizeChanged;
-                }
-                catch
-                {
-                }
-            }
-
-            /// <summary>
-            /// サイズが変更された
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
-            private void ImageTabItem_SizeChanged(
-                object sender,
-                System.Windows.SizeChangedEventArgs e
-                )
-            {
-                try
-                {
-                    GridBackground.Width = RenderSize.Width;
-                    GridBackground.Height = RenderSize.Height;
-                }
-                catch
-                {
-                }
-            }
+    /// <summary>
+    /// サイズが変更された
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void ImageTabItem_SizeChanged(
+        object sender,
+        System.Windows.SizeChangedEventArgs e
+        )
+    {
+        try
+        {
+            GridBackground.Width = RenderSize.Width;
+            GridBackground.Height = RenderSize.Height;
+        }
+        catch
+        {
         }
     }
 }

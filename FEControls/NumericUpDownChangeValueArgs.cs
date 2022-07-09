@@ -1,12 +1,9 @@
-﻿namespace FreeEcho
+﻿namespace FreeEcho.FEControls
 {
-    namespace FEControls
+    /// <summary>
+    /// 「NumericUpDown」の「ChangeValue」イベントデータ
+    /// </summary>
+    public class NumericUpDownChangeValueArgs
     {
-        /// <summary>
-        /// 「NumericUpDown」の「ChangeValue」イベントデータ
-        /// </summary>
-        public class NumericUpDownChangeValueArgs
-        {
-        }
     }
 }

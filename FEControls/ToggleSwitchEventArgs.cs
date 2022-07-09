@@ -1,12 +1,8 @@
-﻿namespace FreeEcho
+﻿namespace FreeEcho.FEControls;
+
+/// <summary>
+/// ToggleSwitchのイベントデータ
+/// </summary>
+public class ToggleSwitchEventArgs
 {
-    namespace FEControls
-    {
-        /// <summary>
-        /// ToggleSwitchのイベントデータ
-        /// </summary>
-        public class ToggleSwitchEventArgs
-        {
-        }
-    }
 }
